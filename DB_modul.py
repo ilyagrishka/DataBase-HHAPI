@@ -1,5 +1,7 @@
 import psycopg2
 
+from db.managers import DBManager
+
 
 def create_database(database_name: str, params: dict):
     """Создание базы данных и таблиц для сохранения данных о компаниях и вакансиях."""
@@ -39,7 +41,6 @@ def create_database(database_name: str, params: dict):
     conn.close()
 
 
-def save_data_to_database():
-    pass
-
-
+def save_data_to_database(data):
+    for item in data:
+        DBManager.create(**item.__dict__)

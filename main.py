@@ -7,7 +7,7 @@ for company_name in company:
     url = 'https://api.hh.ru/employers'
     company_params = {
         'text': company_name,
-        'per_page': 1# в чём смысл цифры?
+        'per_page': 5  # в чём смысл цифры?
     }
 
     response = requests.get(url, params=company_params)
