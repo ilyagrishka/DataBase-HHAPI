@@ -1,6 +1,6 @@
 class DBConfig:
-    HOST = ''
-    PORT = ''
-    USER = ''
-    PASSWORD = ''
-    DATABASE = ''
+    HOST = 'localhost'
+    PORT = '5432'
+    USER = 'postgres'
+    PASSWORD = '0014'
+    DATABASE = 'postgres'
